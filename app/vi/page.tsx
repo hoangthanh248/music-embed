@@ -78,6 +78,7 @@ export default function HomeVi() {
           <Link href="/vi/docs" className="hover:text-white transition-colors">Tài liệu API</Link>
           <Link href="/vi/terms" className="hover:text-white transition-colors">Điều khoản</Link>
           <Link href="/vi/privacy" className="hover:text-white transition-colors">Bảo mật</Link>
+          <Link href="/vi/contact" className="hover:text-white transition-colors">Liên hệ</Link>
           <a href="/api/docs" className="hover:text-white transition-colors">Swagger Interface</a>
         </footer>
       </div>

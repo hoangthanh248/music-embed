@@ -73,6 +73,7 @@ export default function Home() {
           <Link href="/docs" className="hover:text-white transition-colors">Docs</Link>
           <Link href="/terms" className="hover:text-white transition-colors">Terms & Disclaimer</Link>
           <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+          <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
           <a href="/api/docs" className="hover:text-white transition-colors">Swagger API</a>
         </footer>
       </div>
