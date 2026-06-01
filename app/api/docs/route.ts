@@ -56,6 +56,17 @@ const openApiSpec = {
         }
       }
     },
+    "/stream": {
+      get: {
+        summary: "Stream Card / Native HTML Player",
+        parameters: [
+          { name: "url", in: "query", required: true, schema: { type: "string", format: "uri" } }
+        ],
+        responses: {
+          "200": { description: "HTML Stream Player" }
+        }
+      }
+    },
     "/og": {
       get: {
         summary: "Get Open Graph Data",

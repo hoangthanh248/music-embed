@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export default function DemoForm({ 
   title = "Live Demo", 
-  placeholder = "Paste Spotify, Apple Music, TikTok, YouTube url...", 
+  placeholder = "Paste Spotify, Apple Music, TikTok, YouTube, QQ Music url...", 
   buttonText = "Resolve", 
   loadingText = "Resolving..." 
 }: {
