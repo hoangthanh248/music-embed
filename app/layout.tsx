@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import './globals.css'; // Global styles
+import LanguageSwitcher from '@/components/language-switcher';
 
 export const metadata: Metadata = {
   title: 'Music Embed Proxy',
@@ -9,7 +10,10 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <LanguageSwitcher />
+        {children}
+      </body>
     </html>
   );
 }

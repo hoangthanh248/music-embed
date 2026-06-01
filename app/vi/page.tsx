@@ -1,7 +1,7 @@
 import Link from "next/link";
 import DemoForm from "@/components/demo-form";
 
-export default function Home() {
+export default function HomeVi() {
   return (
     <main className="min-h-screen bg-[#050505] text-white overflow-hidden relative flex flex-col items-center justify-center p-8 font-sans">
       {/* Background Mesh Gradient */}
@@ -15,7 +15,7 @@ export default function Home() {
         <div className="space-y-4">
           <h1 className="text-4xl sm:text-6xl font-extrabold leading-[1.1] tracking-tighter mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">Music Embed Proxy API</h1>
           <p className="text-lg text-white/50 leading-relaxed">
-            A frictionless, edge-ready proxy to embed music from Spotify, Apple Music, SoundCloud, and Deezer without heavy third-party intermediate trackers.
+            Máy chủ trung gian cực nhẹ, tối ưu cho máy chủ Edge giúp nhúng nhạc từ Spotify, Apple Music, SoundCloud, YouTube và Deezer mà không bị các bên quảng cáo theo dõi.
           </p>
         </div>
 
@@ -24,7 +24,7 @@ export default function Home() {
             href="/api/docs" 
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/10 rounded-full text-sm font-semibold transition-all backdrop-blur-md"
           >
-            View Swagger Docs
+            Xem tài liệu Swagger
           </Link>
           <a
             href="https://github.com"
@@ -32,12 +32,12 @@ export default function Home() {
             rel="noopener noreferrer"
             className="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-sm font-semibold transition-all backdrop-blur-md text-white/80 hover:text-white"
           >
-            GitHub Repository
+            Mã nguồn GitHub
           </a>
         </div>
 
         <div className="mt-12 text-left bg-black/40 border border-white/10 p-6 rounded-2xl space-y-4 backdrop-blur-md shadow-inner">
-          <h2 className="text-[10px] uppercase tracking-[0.2em] text-white/30 font-bold mb-2">Supported Platforms</h2>
+          <h2 className="text-[10px] uppercase tracking-[0.2em] text-white/30 font-bold mb-2">Các nền tảng hỗ trợ</h2>
           <ul className="grid grid-cols-2 gap-3 text-white/60 text-sm">
             <li className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-emerald-400"></div> Spotify
@@ -57,13 +57,18 @@ export default function Home() {
           </ul>
         </div>
 
-        <DemoForm />
+        <DemoForm 
+          title="Dùng Thử Live Demo"
+          placeholder="Dán link Spotify, Apple Music, YouTube..."
+          buttonText="Phân giải"
+          loadingText="Đang xử lý..."
+        />
 
         <footer className="pt-8 mt-12 border-t border-white/10 flex flex-wrap justify-center gap-6 text-xs text-white/40">
-          <Link href="/docs" className="hover:text-white transition-colors">Docs</Link>
-          <Link href="/terms" className="hover:text-white transition-colors">Terms & Disclaimer</Link>
-          <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
-          <a href="/api/docs" className="hover:text-white transition-colors">Swagger API</a>
+          <Link href="/vi/docs" className="hover:text-white transition-colors">Tài liệu API</Link>
+          <Link href="/vi/terms" className="hover:text-white transition-colors">Điều khoản</Link>
+          <Link href="/vi/privacy" className="hover:text-white transition-colors">Bảo mật</Link>
+          <a href="/api/docs" className="hover:text-white transition-colors">Swagger Interface</a>
         </footer>
       </div>
     </main>
