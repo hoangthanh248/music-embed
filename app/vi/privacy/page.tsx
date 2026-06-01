@@ -9,26 +9,52 @@ export default function PrivacyPageVi() {
         <div className="absolute top-[20%] right-[10%] w-[30%] h-[40%] bg-pink-900 opacity-10 blur-[100px] rounded-full"></div>
       </div>
       
-      <div className="max-w-3xl mx-auto space-y-8 text-left relative z-10 pt-10 pb-20">
+      <div className="max-w-4xl mx-auto space-y-8 text-left relative z-10 pt-10 pb-20">
         <Link href="/vi" className="text-white/50 hover:text-white transition-colors text-sm inline-block items-center flex gap-2">
           &larr; Trở về Trang chủ
         </Link>
         
-        <div className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md shadow-2xl space-y-6 text-white/80 leading-relaxed">
-           <h1 className="text-3xl font-bold tracking-tight text-white mb-2">Chính sách bảo mật, an toàn dữ liệu</h1>
-           <p className="text-white/50 text-sm italic">Cập nhật lần cuối: Hôm nay</p>
+        <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 backdrop-blur-md shadow-2xl space-y-8 text-white/80 leading-relaxed">
+           <header className="border-b border-white/10 pb-6">
+             <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-2">Chính sách Bảo mật & Quyền Riêng tư</h1>
+             <p className="text-white/50 text-sm italic">Ngày hiệu lực: Tháng 06, 2026</p>
+           </header>
 
-           <h2 className="text-xl font-medium text-white pt-4">1. Kiến trúc phi trạng thái (Stateless)</h2>
-           <p className="text-sm">Bản chất của Music Embed Proxy là một proxy API không trạng thái (stateless route) hoạt động hoàn toàn bằng trình xử lý Edge Worker. Nghĩa là chúng tôi <strong>tuyệt đối không lưu trữ</strong>, tái sử dụng hay rao bán bất cứ truy vấn log nào của người dùng. Dữ liệu chạy qua API chỉ nhằm phục vụ web bạn.</p>
-           
-           <h2 className="text-xl font-medium text-white pt-4">2. Không chứa trình theo dõi (Zero Tracking)</h2>
-           <p className="text-sm">API và cả các output sinh ra không cố ý chèn, can thiệp bất kỳ mã script quảng cáo hay tracking-pixel nào để theo dấu thao tác từ người dùng của bạn. Đây là không gian an toàn quyền riêng tư, chặn các middleman tracking để website thật sự tôn trọng End-User.</p>
+           <div className="space-y-8 text-sm md:text-base">
+             <p>Tại không gian Music Embed Proxy, định hướng bảo vệ tài nguyên kỹ thuật số và bảo vệ triệt để quyền riêng tư của những người dùng cuối (End-users) đang duyệt website của bạn là ưu tiên kiến trúc được đặt lên cao nhất. Tài liệu này cung cấp chi tiết mọi luồng dữ liệu mà chúng tôi cần thao tác phần cứng (cũng như những dữ liệu chúng tôi cam kết &quot;tuyệt đối không chạm vào&quot;).</p>
 
-           <h2 className="text-xl font-medium text-white pt-4">3. Log địa chỉ máy tính (IP Address) & Bộ đệm</h2>
-           <p className="text-sm">Có một tiến trình duy nhất thực sự mượn IP của bạn, đó là dịch vụ chống spam/DDos (Rate Limiting). Để giới hạn mức trần 100 truy vấn mỗi giờ/IP, chúng tôi mã hóa IP và đẩy tạm vào kho Redis (Upstash). Dữ liệu này tự xóa sạch bóng sau thời gian vòng đời TTL.</p>
-           
-           <h2 className="text-xl font-medium text-white pt-4">4. Ứng dụng nguồn đóng từ nền tảng hãng</h2>
-           <p className="text-sm">Khi End-user nhấn xem / chơi nhạc từ trong khung iframe nhúng của các nền tảng thật (như thẻ iframe của Spotify, hay của YouTube), luồng xử lý và dữ liệu đó hoàn toàn tuân theo bản cam kết chính sách bảo mật gốc của các ông trùm này, chứ không qua proxy chúng tôi nữa.</p>
+             <section>
+               <h2 className="text-xl font-semibold text-white mb-3">1. Kiến trúc Phi trạng thái (Stateless Architecture)</h2>
+               <p>Máy chủ cốt lõi của Proxy được chúng tôi chủ đích lập trình theo mẫu loại bỏ sự hiện diện của cơ sở dữ liệu vĩnh viễn (Database-less design). Toàn bộ API hoạt động phi trạng thái và phân tán qua các trung tâm dữ liệu Edge Cloud: hệ thống chỉ thu nhận siêu liên kết URL gốc, truy vấn thông tin với tốc độ phần nghìn giây và phản hồi trực tiếp các thẻ iframe gọn gàng trở lại thiết bị gọi hàm.</p>
+               <p className="mt-3">Song song với việc không mở cổng tạo tài khoản thành viên, tập tin gốc của chúng tôi không yêu cầu thu thập, lưu diễn hay khai thác bất cứ số liệu cá nhân nào, bao gồm họ tên, giới tính định danh, thông tin ví điện tử, số điện thoại hoặc email liên lạc.</p>
+             </section>
+             
+             <section>
+               <h2 className="text-xl font-semibold text-white mb-3">2. Lời Hứa Không Trình theo dõi (Zero Tracking Commitment)</h2>
+               <p>Nhóm đội ngũ của chúng tôi hoàn toàn tẩy chay phương pháp bán rẻ luồng truy cập. Bạn có thể vững tin rằng API trung gian này <strong>hoàn toàn không tiêm nhiễm, đính kèm, hay chèn ẩn</strong> bất lỳ dạng script quảng cáo mạng, mã nhúng phân tích hành vi phức tạp (chẳng hạn như Google Analytics, hệ thống Retargeting Meta Pixel) hoặc thiết lập các thuật toán chấm điểm nhân khẩu học lên khung hiển thị iframe đầu ra.</p>
+               <p className="mt-3">Mục đích xây dựng mã nguồn ứng dụng này là trao tặng các kỹ sư phần mềm một điểm tựa tiện lợi nhất để họ đem nội dung Media đa phương tiện tới website mình mà không vô tình biến người dùng chân chính thành món hàng thu thập của các mạng trung gian độc hại.</p>
+             </section>
+
+             <section>
+               <h2 className="text-xl font-semibold text-white mb-3">3. Dữ liệu Máy khách (IP) & Giải pháp Chống lạm dụng (Security)</h2>
+               <p>Bởi tính chất hoàn toàn miễn phí, hệ thống phải đương đầu với vô số làn sóng botnet spam. Nhằm giữ hệ thống server Edge luôn được tối ưu, chúng tôi thiết lập cơ chế kiểm định truy vấn tự động nhận dạng bằng thông tin địa chỉ IP truy cập tại thời điểm gọi lệnh.</p>
+               <ul className="list-disc pl-5 mt-3 space-y-1 text-white/60">
+                 <li><strong>Kho tạm bộ nhớ đệm (Cache):</strong> Bất kỳ thao tác khởi chạy nào truyền tới API sẽ mang theo chữ ký địa chỉ mạng (IP) của Server hoặc Client đó. Cấu trúc IP này sẽ được băm bảo mật và gửi lên máy trạm Upstash Redis chỉ vì một mục đích duy nhất: đếm lưu lượng vượt chỉ tiêu an toàn.</li>
+                 <li><strong>Thủ tục thanh tẩy tự động (TTL):</strong> Vòng lặp đếm IP này hoàn toàn phụ thuộc vào biến cấu trúc sinh tồn thời gian ngắn (Time-to-Live). Ngay khi vượt mốc, cấu trúc lập tức phân rã tự động phá hủy. Chúng tôi không thu thập kho địa chỉ máy, không phân tích khoanh vùng vị trí địa lý của bạn vượt ra ngoài ranh giới phòng vệ an ninh cơ bản.</li>
+               </ul>
+             </section>
+             
+             <section>
+               <h2 className="text-xl font-semibold text-white mb-3">4. Khung nhúng của bên thứ ba (Third-party Iframes) và Chính sách liên đới</h2>
+               <p>Cần làm rõ với ranh giới trách nhiệm, một khi API Music Embed Proxy tuôn ra mã hộp thoại HTML cuối và hộp nội dung âm thanh đó chính thức kết xuất hình ảnh lên trình duyệt web khách hàng, lúc này <strong>đường truyền đã hoàn toàn kết nối thẳng tay từ web thiết bị người dùng đến các kho dữ liệu đa phương tiện quốc tế</strong> của Spotify, Apple Music, YouTube, SoundCloud, Amazon Music hoặc TikTok.</p>
+               <p className="mt-3">Khởi đầu tại quy trình đó, Dịch vụ Proxy của chúng tôi ngay lập tức kết thúc vòng đời. Bất kỳ phiên làm việc lưu Cookies, cache audio hay các lệnh ghi nhớ vị trí xem dở mà nằm bên trong khung cửa sổ phát nhạc mini đó sẽ phụ thuộc hệ thống nền tảng gốc. Chính sách thu thập dữ liệu của nền tảng phát hành nội dung sẽ có hiệu lực thi hành đầy đủ nhất và nằm ngoài khả năng can thiệp của ứng dụng Proxy chúng tôi.</p>
+             </section>
+
+             <section>
+               <h2 className="text-xl font-semibold text-white mb-3">5. Liên hệ với đội ngũ kỹ thuật</h2>
+               <p>Nếu bạn thực sự vẫn muốn cung cấp đánh giá sâu sắc hơn liên quan đến hạ tầng bảo mật dữ liệu của ứng dụng hay có nguyện vọng chia sẻ kinh nghiệm xử lý máy chủ Edge ngầm, bạn được chào đón nhiệt liệt đi tới trang <Link href="/vi/contact" className="text-blue-400 hover:underline">Liên hệ kỹ thuật</Link> để gõ vài dòng tin nhắn kết nối dự án.</p>
+             </section>
+           </div>
         </div>
       </div>
     </main>
