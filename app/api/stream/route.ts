@@ -3,7 +3,7 @@ import { resolveUrl } from "@/lib/parsers";
 import { getCache, setCache } from "@/lib/cache";
 import { checkRateLimit } from "@/lib/rate-limit";
 
-export const runtime = 'edge';
+
 
 export async function GET(req: NextRequest) {
   const ip = req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip") || "anonymous";

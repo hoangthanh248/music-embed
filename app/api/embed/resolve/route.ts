@@ -4,7 +4,7 @@ import { getCache, setCache } from "@/lib/cache";
 import { checkRateLimit } from "@/lib/rate-limit";
 import { z } from "zod";
 
-export const runtime = 'edge';
+
 
 const bodySchema = z.object({
   url: z.string().url()
