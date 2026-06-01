@@ -1,27 +1,27 @@
 import Link from 'next/link';
 
-export default function ContactPageVi() {
+export default function ContactPage() {
   return (
     <main className="min-h-screen bg-transparent text-white overflow-auto relative p-8 font-sans">
       
       
       <div className="max-w-3xl mx-auto space-y-8 text-center relative z-10 pt-10 pb-20">
         <div className="text-left">
-          <Link href="/vi" className="text-white/50 hover:text-white transition-colors text-sm inline-block items-center flex gap-2 w-max">
-            &larr; Trở về Trang chủ
+          <Link href="/en" className="text-white/50 hover:text-white transition-colors text-sm inline-block items-center flex gap-2 w-max">
+            &larr; Back to Home
           </Link>
         </div>
         
         <div className="bg-white/5 border border-white/10 rounded-3xl p-12 backdrop-blur-md shadow-2xl space-y-8 text-white/80 leading-relaxed text-center">
-           <h1 className="text-4xl font-extrabold tracking-tight text-white mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">Liên hệ</h1>
+           <h1 className="text-4xl font-extrabold tracking-tight text-white mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">Get in Touch</h1>
            <p className="text-white/60 text-lg max-w-lg mx-auto">
-             Bạn có câu hỏi, góp ý hay cần hỗ trợ kết nối API? Hãy thoải mái liên hệ qua các kênh dưới đây nhé.
+             Have questions, feedback, or need support with the API? Feel free to reach out through any of the channels below.
            </p>
 
            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6">
              <a href="mailto:thazh@duck.com" className="bg-black/40 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors flex flex-col items-center gap-3 group">
                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center group-hover:bg-blue-500/30 transition-colors">
-                 <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2v10a2 2 0 002 2z"></path></svg>
+                 <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                </div>
                <span className="text-white font-medium">Email</span>
              </a>

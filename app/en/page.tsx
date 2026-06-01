@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function HomeVi() {
+export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center p-6 md:p-12 font-sans w-full max-w-6xl mx-auto pt-24 pb-12">
       <div className="w-full space-y-12 text-center relative z-10 flex flex-col items-center">
@@ -14,18 +14,18 @@ export default function HomeVi() {
             Thazh Embed
           </h1>
           <p className="text-xl md:text-2xl text-white/70 leading-relaxed font-normal max-w-2xl px-4">
-            Máy chủ trung gian cực nhẹ tối ưu Edge giúp nhúng nhạc/video dễ dàng mà không bị quảng cáo theo dõi.
+            A frictionless, edge-ready proxy to embed music and video without heavy third-party intermediate trackers.
           </p>
         </div>
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full mt-2">
           <Link 
-            href="/vi/demo" 
+            href="/en/demo" 
             className="w-full sm:w-auto px-6 py-3 bg-white hover:bg-neutral-200 text-black rounded-full text-xs uppercase tracking-wider font-bold transition-all shadow-[0_4px_20px_0_rgba(255,255,255,0.3)] flex items-center justify-center gap-2 backdrop-blur-md"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-            Dùng thử
+            Try Demo
           </Link>
           <a
             href="https://github.com/hoangthanh248/music-embed"
@@ -45,7 +45,7 @@ export default function HomeVi() {
           <div className="relative z-10 flex flex-col md:flex-row gap-12 items-start md:items-center">
             <div className="flex-1 space-y-6">
               <h2 className="text-sm uppercase tracking-[0.3em] text-white/50 font-bold flex items-center gap-4">
-                 Các nền tảng hỗ trợ
+                 Supported Platforms
                  <span className="h-px bg-white/20 flex-1"></span>
               </h2>
               <ul className="grid grid-cols-2 md:grid-cols-2 gap-4 text-white text-sm font-semibold">
@@ -77,20 +77,20 @@ export default function HomeVi() {
               <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-6 border border-white/20">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-white"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Định dạng chi tiết</h3>
-              <p className="text-white/60 text-sm mb-6">Xem chính xác các định dạng URL được hỗ trợ cho từng nền tảng cụ thể.</p>
-              <Link href="/vi/platforms" className="px-6 py-3 bg-white hover:bg-neutral-200 text-black text-sm font-bold rounded-full transition-colors w-full">Xem Thêm</Link>
+              <h3 className="text-xl font-bold text-white mb-2">Detailed Format Specs</h3>
+              <p className="text-white/60 text-sm mb-6">See exactly which URL patterns are supported for each platform type.</p>
+              <Link href="/en/platforms" className="px-6 py-3 bg-white hover:bg-neutral-200 text-black text-sm font-bold rounded-full transition-colors w-full">View Details</Link>
             </div>
           </div>
         </div>
 
         {/* Footer */}
         <footer className="pt-12 pb-6 flex flex-wrap justify-center gap-3 text-xs md:text-sm font-semibold tracking-wide w-full max-w-4xl">
-          <Link href="/vi/platforms" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Nền Tảng</Link>
-          <Link href="/vi/docs" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Tài liệu API</Link>
-          <Link href="/vi/terms" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Điều khoản</Link>
-          <Link href="/vi/privacy" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Bảo mật</Link>
-          <Link href="/vi/contact" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Liên hệ</Link>
+          <Link href="/en/platforms" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Platforms</Link>
+          <Link href="/en/docs" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Docs</Link>
+          <Link href="/en/terms" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Terms</Link>
+          <Link href="/en/privacy" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Privacy</Link>
+          <Link href="/en/contact" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Contact</Link>
           <a href="/api/docs" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Swagger API</a>
         </footer>
       </div>
