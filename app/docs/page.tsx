@@ -24,7 +24,7 @@ Base URL: \`https://YOUR_DOMAIN.com\`
 - **Response:** Standard JSON Open Graph metadata
 
 ### Platforms Supported
-Spotify, Apple Music, SoundCloud, Deezer, YouTube
+Spotify, Apple Music, SoundCloud, Deezer, YouTube, Amazon Music, TikTok
 `;
 
 export default function DocsPage() {

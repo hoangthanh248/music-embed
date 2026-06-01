@@ -33,7 +33,9 @@ export async function GET(req: NextRequest) {
       apple: "Apple Music",
       soundcloud: "SoundCloud",
       deezer: "Deezer",
-      youtube: "YouTube"
+      youtube: "YouTube",
+      amazon: "Amazon Music",
+      tiktok: "TikTok"
     };
 
     const og: OpenGraphResponse = {

@@ -33,7 +33,9 @@ export async function GET(req: NextRequest) {
       apple: "Apple Music",
       soundcloud: "SoundCloud",
       deezer: "Deezer",
-      youtube: "YouTube"
+      youtube: "YouTube",
+      amazon: "Amazon Music",
+      tiktok: "TikTok"
     };
 
     const providerName = data.platform ? platformNames[data.platform] : "Music";
@@ -41,7 +43,9 @@ export async function GET(req: NextRequest) {
                         data.platform === 'apple' ? 'https://music.apple.com' :
                         data.platform === 'soundcloud' ? 'https://soundcloud.com' :
                         data.platform === 'deezer' ? 'https://deezer.com' :
-                        data.platform === 'youtube' ? 'https://youtube.com' : 'https://example.com';
+                        data.platform === 'youtube' ? 'https://youtube.com' :
+                        data.platform === 'amazon' ? 'https://music.amazon.com' :
+                        data.platform === 'tiktok' ? 'https://tiktok.com' : 'https://example.com';
 
     let width = 100;
     let height = 152;
@@ -49,6 +53,8 @@ export async function GET(req: NextRequest) {
     if (data.platform === 'soundcloud') { width = 100; height = 166; }
     if (data.platform === 'deezer') { width = 100; height = 152; }
     if (data.platform === 'youtube') { width = 100; height = 315; }
+    if (data.platform === 'tiktok') { width = 325; height = 705; }
+    if (data.platform === 'amazon') { width = 100; height = 150; }
 
     const oembed: OEmbedResponse = {
       version: "1.0",

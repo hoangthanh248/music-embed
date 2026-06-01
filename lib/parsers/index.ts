@@ -4,6 +4,8 @@ import { isAppleMusic, parseAppleMusic } from "../apple";
 import { isSoundCloud, parseSoundCloud } from "../soundcloud";
 import { isDeezer, parseDeezer } from "../deezer";
 import { isYouTube, parseYouTube } from "../youtube";
+import { isAmazonMusic, parseAmazonMusic } from "../amazon";
+import { isTikTok, parseTikTok } from "../tiktok";
 import { validateUrlOrThrow } from "../security";
 
 export async function resolveUrl(url: string): Promise<ResolveResponse> {
@@ -23,6 +25,12 @@ export async function resolveUrl(url: string): Promise<ResolveResponse> {
   }
   if (isYouTube(url)) {
     return parseYouTube(url, parsed);
+  }
+  if (isAmazonMusic(url)) {
+    return parseAmazonMusic(url, parsed);
+  }
+  if (isTikTok(url)) {
+    return parseTikTok(url);
   }
 
   throw new Error("Unsupported platform");

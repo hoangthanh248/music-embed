@@ -15,7 +15,7 @@ export default function Home() {
         <div className="space-y-4">
           <h1 className="text-4xl sm:text-6xl font-extrabold leading-[1.1] tracking-tighter mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">Music Embed Proxy API</h1>
           <p className="text-lg text-white/50 leading-relaxed">
-            A frictionless, edge-ready proxy to embed music from Spotify, Apple Music, SoundCloud, and Deezer without heavy third-party intermediate trackers.
+            A frictionless, edge-ready proxy to embed music/video from Spotify, Apple Music, SoundCloud, YouTube, TikTok, Amazon Music and Deezer without heavy third-party intermediate trackers.
           </p>
         </div>
 
@@ -54,12 +54,22 @@ export default function Home() {
             <li className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-red-600"></div> YouTube
             </li>
+            <li className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-cyan-400"></div> Amazon Music
+            </li>
+            <li className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-neutral-300"></div> TikTok
+            </li>
           </ul>
+          <div className="mt-4 text-center sm:text-left">
+            <Link href="/platforms" className="text-xs text-white/40 hover:text-white transition-colors underline">View all supported formats &rarr;</Link>
+          </div>
         </div>
 
         <DemoForm />
 
         <footer className="pt-8 mt-12 border-t border-white/10 flex flex-wrap justify-center gap-6 text-xs text-white/40">
+          <Link href="/platforms" className="hover:text-white transition-colors">Platforms</Link>
           <Link href="/docs" className="hover:text-white transition-colors">Docs</Link>
           <Link href="/terms" className="hover:text-white transition-colors">Terms & Disclaimer</Link>
           <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>

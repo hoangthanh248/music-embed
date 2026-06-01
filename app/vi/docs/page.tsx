@@ -24,7 +24,7 @@ Base URL: \`https://YOUR_DOMAIN.com\`
 - **Response:** JSON Open Graph metadata
 
 ### Các nền tảng được hỗ trợ
-Spotify, Apple Music, SoundCloud, Deezer, YouTube
+Spotify, Apple Music, SoundCloud, Deezer, YouTube, Amazon Music, TikTok
 `;
 
 export default function DocsPageVi() {

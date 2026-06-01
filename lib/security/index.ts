@@ -10,7 +10,13 @@ const allowedDomains = [
   "youtube.com",
   "www.youtube.com",
   "youtu.be",
-  "music.youtube.com"
+  "music.youtube.com",
+  "amazon.com",
+  "music.amazon.com",
+  "tiktok.com",
+  "www.tiktok.com",
+  "vm.tiktok.com",
+  "vt.tiktok.com"
 ];
 
 const blockedIPs = [

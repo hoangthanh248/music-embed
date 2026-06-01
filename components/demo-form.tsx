@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export default function DemoForm({ 
   title = "Live Demo", 
-  placeholder = "Paste Spotify, Apple Music, YouTube url...", 
+  placeholder = "Paste Spotify, Apple Music, TikTok, YouTube url...", 
   buttonText = "Resolve", 
   loadingText = "Resolving..." 
 }: {
@@ -75,7 +75,7 @@ export default function DemoForm({
             <iframe 
                src={result.embedUrl}
                width="100%" 
-               height={result.platform === 'youtube' ? 315 : (result.platform === 'soundcloud' ? 166 : 152)} 
+               height={result.platform === 'tiktok' ? 705 : (result.platform === 'youtube' ? 315 : (result.platform === 'soundcloud' ? 166 : 152))} 
                frameBorder="0" 
                allowFullScreen 
                className="block"

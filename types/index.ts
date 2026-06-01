@@ -1,4 +1,4 @@
-export type Platform = 'spotify' | 'apple' | 'soundcloud' | 'deezer' | 'youtube';
+export type Platform = 'spotify' | 'apple' | 'soundcloud' | 'deezer' | 'youtube' | 'amazon' | 'tiktok';
 
 export interface ResolveResponse {
   success: boolean;

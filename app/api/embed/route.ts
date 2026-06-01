@@ -31,6 +31,8 @@ export async function GET(req: NextRequest) {
     if (data.platform === 'apple') { height = 150; }
     if (data.platform === 'soundcloud') { height = 166; }
     if (data.platform === 'youtube') { height = 315; }
+    if (data.platform === 'tiktok') { height = 705; }
+    if (data.platform === 'amazon') { height = 150; }
     
     const html = `<iframe src="${data.embedUrl}" width="100%" height="${height}" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
 
