@@ -15,7 +15,7 @@ export default function LanguageSwitcher() {
   }
   
   return (
-    <div className="absolute top-6 right-6 z-50">
+    <div className="fixed top-6 right-6 z-50">
       <Link href={toggleUrl} className="flex items-center gap-2 px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-xs font-semibold backdrop-blur-md transition-all shadow-xl">
         <span className={!isVi ? "text-white" : "text-white/40"}>EN</span>
         <span className="text-white/20">|</span>

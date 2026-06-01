@@ -12,19 +12,15 @@ export default function PlatformsPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#050505] text-white overflow-auto relative p-8 font-sans">
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-900 opacity-20 blur-[120px] rounded-full"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-blue-900 opacity-20 blur-[120px] rounded-full"></div>
-        <div className="absolute top-[20%] right-[10%] w-[30%] h-[40%] bg-pink-900 opacity-10 blur-[100px] rounded-full"></div>
-      </div>
+    <main className="min-h-screen bg-transparent text-white overflow-auto relative p-8 font-sans">
+      
       
       <div className="max-w-3xl mx-auto space-y-8 text-left relative z-10 pt-10 pb-20">
-        <Link href="/" className="text-white/50 hover:text-white transition-colors text-sm inline-block items-center flex gap-2">
+        <Link href="/" className="px-5 py-2.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)] text-white/80 hover:text-white transition-all text-sm font-semibold flex items-center gap-2 inline-flex w-fit">
           &larr; Back to Home
         </Link>
         
-        <div className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md shadow-2xl space-y-8 text-white/80 leading-relaxed">
+        <div className="bg-black/20 border border-white/20 p-8 md:p-12 rounded-[3rem] backdrop-blur-[40px] shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] backdrop-saturate-150 relative overflow-hidden text-white/80 leading-relaxed space-y-8 text-white/80 leading-relaxed">
            <h1 className="text-3xl font-bold tracking-tight text-white mb-2">Supported Platforms</h1>
            <p className="text-white/50 text-sm">Below is the complete list of media platforms supported by our proxy.</p>
 

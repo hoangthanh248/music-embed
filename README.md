@@ -1,4 +1,4 @@
-# Music Embed Proxy API
+# Thazh Embed
 
 A highly optimized API Proxy to embed music from various platforms without middleman tracking services.
 

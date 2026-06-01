@@ -1,5 +1,5 @@
 {
-  "name": "Music Embed Proxy API",
+  "name": "Thazh Embed",
   "description": "API Proxy to embed music from various platforms without middleman tracking.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
