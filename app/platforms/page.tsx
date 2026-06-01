@@ -9,7 +9,7 @@ export default function PlatformsPage() {
     { id: 'youtube', name: 'YouTube', color: 'bg-red-600', types: 'video, shorts (via standard url)' },
     { id: 'amazon', name: 'Amazon Music', color: 'bg-cyan-400', types: 'track, album' },
     { id: 'tiktok', name: 'TikTok', color: 'bg-neutral-300', types: 'video' },
-    { id: 'qq', name: 'QQ Music', color: 'bg-[#31C27C]', types: 'song' },
+    { id: 'youtube-music', name: 'YouTube Music', color: 'bg-red-600', types: 'song, album' },
   ];
 
   return (

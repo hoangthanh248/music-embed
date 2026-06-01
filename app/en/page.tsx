@@ -71,7 +71,7 @@ export default function Home() {
                   <div className="w-3 h-3 rounded-full bg-[#ff0050] shadow-[0_0_12px_rgba(255,0,80,0.8)] relative after:content-[''] after:absolute after:inset-0 after:bg-[#00f2fe] after:mix-blend-lighten after:blur-[2px] after:rounded-full"></div> TikTok
                 </li>
                 <li className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:scale-[1.02] transition-all shadow-lg backdrop-blur-md">
-                  <div className="w-3 h-3 rounded-full bg-[#31C27C] shadow-[0_0_12px_rgba(49,194,124,0.8)]"></div> QQ Music
+                  <div className="w-3 h-3 rounded-full bg-red-600 shadow-[0_0_12px_rgba(220,38,38,0.8)]"></div> YouTube Music
                 </li>
               </ul>
             </div>

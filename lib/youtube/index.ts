@@ -37,9 +37,11 @@ export async function parseYouTube(url: string, rawUrl: URL): Promise<ResolveRes
     // Ignore fetch error, fallback to basic response
   }
 
+  const isMusic = rawUrl.hostname === 'music.youtube.com';
+
   return {
     success: true,
-    platform: 'youtube',
+    platform: isMusic ? 'youtube-music' : 'youtube',
     type: 'video',
     id: videoId,
     title,

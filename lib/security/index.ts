@@ -16,10 +16,7 @@ const allowedDomains = [
   "tiktok.com",
   "www.tiktok.com",
   "vm.tiktok.com",
-  "vt.tiktok.com",
-  "qq.com",
-  "y.qq.com",
-  "c.y.qq.com"
+  "vt.tiktok.com"
 ];
 
 const blockedIPs = [

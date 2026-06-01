@@ -32,7 +32,7 @@ Base URL: \`https://embed.thazh.qzz.io\`
 - **Response:** Raw HTML structure (a full webpage) rendering an active player taking 100% of the viewport width/height. Can be used as \\\`iframe src\\\`.
 
 ### Platforms Supported
-Spotify, Apple Music, SoundCloud, Deezer, YouTube, Amazon Music, TikTok, QQ Music
+Spotify, Apple Music, SoundCloud, Deezer, YouTube, Amazon Music, TikTok, YouTube Music
 `;
 
 export default function DocsPage() {

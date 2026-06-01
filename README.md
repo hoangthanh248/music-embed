@@ -54,6 +54,6 @@ const html = await MusicEmbed.html('https://open.spotify.com/track/...');
 * **YouTube**
 * **Amazon Music**
 * **TikTok**
-* **QQ Music**
+* **YouTube Music**
 
 Designed specifically for Edge computing - no node-only APIs, no databases, just pure HTTP APIs.
