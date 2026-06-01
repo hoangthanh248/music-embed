@@ -19,7 +19,11 @@ Base URL: \`https://embed.thazh.qzz.io\`
 \`GET /api/embed?url={encodeURIComponent(url)}\`
 - **Response:** Raw HTML string with iframe
 
-### 4. Get Open Graph Data
+### 4. Get React Component
+\`GET /api/react?url={encodeURIComponent(url)}\`
+- **Response:** Raw TSX/JSX React Component string
+
+### 5. Get Open Graph Data
 \`GET /api/og?url={encodeURIComponent(url)}\`
 - **Response:** Standard JSON Open Graph metadata
 
@@ -65,6 +69,11 @@ export default function DocsPage() {
            <div className="space-y-3 pt-4 border-t border-white/5">
              <h3 className="text-lg font-medium text-emerald-400 font-mono">GET /api/embed?url=...</h3>
              <p className="text-sm text-white/60">Returns a raw HTML string with an optimized iframe ready to render on a webpage.</p>
+           </div>
+           
+           <div className="space-y-3 pt-4 border-t border-white/5">
+             <h3 className="text-lg font-medium text-emerald-400 font-mono">GET /api/react?url=...</h3>
+             <p className="text-sm text-white/60">Returns a pre-built React Component (TSX/JSX) structure ready to be embedded into any Next.js or React application.</p>
            </div>
            
            <div className="space-y-3 pt-4 border-t border-white/5">

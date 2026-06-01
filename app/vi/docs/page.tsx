@@ -19,7 +19,11 @@ Base URL: \`https://embed.thazh.qzz.io\`
 \`GET /api/embed?url={encodeURIComponent(url)}\`
 - **Response:** Chuỗi HTML chứa thẻ iframe trực tiếp
 
-### 4. Lấy Open Graph Metadata
+### 4. Lấy component React
+\`GET /api/react?url={encodeURIComponent(url)}\`
+- **Response:** Chuỗi Component React (TSX/JSX)
+
+### 5. Lấy Open Graph Metadata
 \`GET /api/og?url={encodeURIComponent(url)}\`
 - **Response:** JSON Open Graph metadata
 
@@ -65,6 +69,11 @@ export default function DocsPageVi() {
            <div className="space-y-3 pt-4 border-t border-white/5">
              <h3 className="text-lg font-medium text-emerald-400 font-mono">GET /api/embed?url=...</h3>
              <p className="text-sm text-white/60">Trả về mã HTML chứa thẻ iframe đã được tính toán tỉ lệ siêu ưu việt. Bạn cứ nhúng thẳng vào web là xong.</p>
+           </div>
+           
+           <div className="space-y-3 pt-4 border-t border-white/5">
+             <h3 className="text-lg font-medium text-emerald-400 font-mono">GET /api/react?url=...</h3>
+             <p className="text-sm text-white/60">Trả về cấu trúc React Component (TSX/JSX) hoàn chỉnh, sẵn sàng để chèn vào bất kỳ ứng dụng Next.js hay React nào.</p>
            </div>
            
            <div className="space-y-3 pt-4 border-t border-white/5">
