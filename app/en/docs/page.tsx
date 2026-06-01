@@ -87,7 +87,7 @@ export default function DocsPage() {
 
            <div className="space-y-3 pt-4 border-t border-white/5">
              <h3 className="text-lg font-medium text-emerald-400 font-mono">GET /api/stream?url=...</h3>
-             <p className="text-sm text-white/60">Returns an active HTML card layout containing the media embed securely without middle-man referers. This URL can directly be used inside an iframe's <code className="text-pink-400">src</code> field.</p>
+             <p className="text-sm text-white/60">Returns an active HTML card layout containing the media embed securely without middle-man referers. This URL can directly be used inside an iframe&apos;s <code className="text-pink-400">src</code> field.</p>
            </div>
         </div>
       </div>
