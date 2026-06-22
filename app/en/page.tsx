@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PlatformSwiper from "@/components/platform-swiper";
 
 export default function Home() {
   return (
@@ -42,59 +43,60 @@ export default function Home() {
         <div className="mt-16 md:mt-24 p-8 md:p-12 text-left bg-black/10 border border-white/20 rounded-[3rem] backdrop-blur-[40px] shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] backdrop-saturate-150 w-full relative overflow-hidden group hover:border-white/30 transition-all duration-500">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 blur-[100px] rounded-full pointer-events-none group-hover:bg-white/10 transition-colors duration-700"></div>
           
-          <div className="relative z-10 flex flex-col md:flex-row gap-12 items-start md:items-center">
-            <div className="flex-1 space-y-6">
-              <h2 className="text-sm uppercase tracking-[0.3em] text-white/50 font-bold flex items-center gap-4">
+          <div className="relative z-10 flex flex-col items-center">
+            <div className="w-full max-w-sm mx-auto space-y-6">
+              <h2 className="text-sm uppercase tracking-[0.3em] text-white/50 font-bold flex items-center justify-center gap-4">
+                 <span className="h-px bg-white/20 flex-1"></span>
                  Supported Platforms
                  <span className="h-px bg-white/20 flex-1"></span>
               </h2>
-              <ul className="grid grid-cols-2 md:grid-cols-2 gap-4 text-white text-sm font-semibold">
-                <li className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:scale-[1.02] transition-all shadow-lg backdrop-blur-md">
-                  <div className="w-3 h-3 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.8)]"></div> Spotify
-                </li>
-                <li className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:scale-[1.02] transition-all shadow-lg backdrop-blur-md">
-                  <div className="w-3 h-3 rounded-full bg-pink-400 shadow-[0_0_12px_rgba(244,114,182,0.8)]"></div> Apple Music
-                </li>
-                <li className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:scale-[1.02] transition-all shadow-lg backdrop-blur-md">
-                  <div className="w-3 h-3 rounded-full bg-amber-400 shadow-[0_0_12px_rgba(251,191,36,0.8)]"></div> SoundCloud
-                </li>
-                <li className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:scale-[1.02] transition-all shadow-lg backdrop-blur-md">
-                  <div className="w-3 h-3 rounded-full bg-blue-400 shadow-[0_0_12px_rgba(96,165,250,0.8)]"></div> Deezer
-                </li>
-                <li className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:scale-[1.02] transition-all shadow-lg backdrop-blur-md">
-                  <div className="w-3 h-3 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.8)]"></div> YouTube
-                </li>
-                <li className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:scale-[1.02] transition-all shadow-lg backdrop-blur-md">
-                  <div className="w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.8)]"></div> Amazon Music
-                </li>
-                <li className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:scale-[1.02] transition-all shadow-lg backdrop-blur-md">
-                  <div className="w-3 h-3 rounded-full bg-[#ff0050] shadow-[0_0_12px_rgba(255,0,80,0.8)] relative after:content-[''] after:absolute after:inset-0 after:bg-[#00f2fe] after:mix-blend-lighten after:blur-[2px] after:rounded-full"></div> TikTok
-                </li>
-                <li className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:scale-[1.02] transition-all shadow-lg backdrop-blur-md">
-                  <div className="w-3 h-3 rounded-full bg-red-600 shadow-[0_0_12px_rgba(220,38,38,0.8)]"></div> YouTube Music
-                </li>
-              </ul>
+              <div className="w-full h-80 relative flex items-center justify-center perspective-1000">
+                 <PlatformSwiper />
+              </div>
             </div>
             
-            <div className="md:w-1/3 flex flex-col items-center justify-center text-center p-8 bg-black/20 rounded-[2rem] border border-white/10 backdrop-blur-2xl">
-              <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-6 border border-white/20">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-white"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Detailed Format Specs</h3>
-              <p className="text-white/60 text-sm mb-6">See exactly which URL patterns are supported for each platform type.</p>
-              <Link href="/en/platforms" className="px-6 py-3 bg-white hover:bg-neutral-200 text-black text-sm font-bold rounded-full transition-colors w-full">View Details</Link>
+            <Link href="/en/platforms" className="mt-8 px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-sm font-bold rounded-full transition-colors backdrop-blur-md">
+              View Format Details
+            </Link>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="mt-16 w-full max-w-3xl text-left space-y-6">
+          <h2 className="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            <div className="p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md">
+              <h3 className="text-lg font-bold text-white mb-2">What is Thazh Embed?</h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                It's an edge-computed proxy service that helps embed media (music, videos) onto your website or application quickly and without heavy third-party intermediate trackers.
+              </p>
+            </div>
+            <div className="p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md">
+              <h3 className="text-lg font-bold text-white mb-2">Which platforms are supported?</h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                We currently support Spotify, Apple Music, SoundCloud, Deezer, YouTube, YouTube Music, Amazon Music, and TikTok.
+              </p>
+            </div>
+            <div className="p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md">
+              <h3 className="text-lg font-bold text-white mb-2">Is there a rate limit?</h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                The free version may apply limits to prevent abuse. For embedding on high-traffic websites, consider cloning the repository and self-hosting on Deno Deploy or Vercel Edge.
+              </p>
             </div>
           </div>
         </div>
 
         {/* Footer */}
-        <footer className="pt-12 pb-6 flex flex-wrap justify-center gap-3 text-xs md:text-sm font-semibold tracking-wide w-full max-w-4xl">
-          <Link href="/en/platforms" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Platforms</Link>
-          <Link href="/en/docs" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Docs</Link>
-          <Link href="/en/terms" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Terms</Link>
-          <Link href="/en/privacy" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Privacy</Link>
-          <Link href="/en/contact" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Contact</Link>
-          <a href="/api/docs" className="hover:bg-white/20 text-white/70 hover:text-white transition-all bg-black/20 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-md shadow-[0_4px_12px_rgba(0,0,0,0.1)]">Swagger API</a>
+        <footer className="w-full mt-24 pt-8 pb-8 border-t border-white/10 flex flex-col items-center gap-6">
+          <div className="flex flex-wrap justify-center gap-6 text-sm font-medium tracking-wide">
+            <Link href="/en/platforms" className="text-white/60 hover:text-white transition-colors">Platforms</Link>
+            <Link href="/en/docs" className="text-white/60 hover:text-white transition-colors">Docs</Link>
+            <Link href="/en/terms" className="text-white/60 hover:text-white transition-colors">Terms</Link>
+            <Link href="/en/privacy" className="text-white/60 hover:text-white transition-colors">Privacy</Link>
+            <Link href="/en/contact" className="text-white/60 hover:text-white transition-colors">Contact</Link>
+            <a href="/api/docs" className="text-white/60 hover:text-white transition-colors">Swagger API</a>
+          </div>
+          <p className="text-xs text-white/40">&copy; {new Date().getFullYear()} Thazh Embed. All rights reserved.</p>
         </footer>
       </div>
     </main>

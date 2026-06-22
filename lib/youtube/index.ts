@@ -13,20 +13,24 @@ export async function parseYouTube(url: string, rawUrl: URL): Promise<ResolveRes
     videoId = rawUrl.pathname.split('/')[2];
   } else if (rawUrl.pathname === '/watch') {
     videoId = rawUrl.searchParams.get('v');
+  } else if (rawUrl.pathname === '/playlist') {
+    videoId = rawUrl.searchParams.get('list');
   }
 
   if (!videoId) {
-    throw new Error("Invalid YouTube URL format or missing video ID");
+    throw new Error("Invalid YouTube URL format or missing video/playlist ID");
   }
 
-  const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}`;
+  const isPlaylist = rawUrl.pathname === '/playlist';
+  const embedUrl = isPlaylist ? `https://www.youtube-nocookie.com/embed/videoseries?list=${videoId}` : `https://www.youtube-nocookie.com/embed/${videoId}`;
   
   let title = "YouTube Video";
   let artist = "YouTube";
   let thumbnail = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 
   try {
-    const oembedRes = await fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`);
+    const oembedTarget = isPlaylist ? `https://www.youtube.com/playlist?list=${videoId}` : `https://www.youtube.com/watch?v=${videoId}`;
+    const oembedRes = await fetch(`https://www.youtube.com/oembed?url=${encodeURIComponent(oembedTarget)}&format=json`);
     if (oembedRes.ok) {
       const data = await oembedRes.json();
       title = data.title || title;
@@ -42,7 +46,7 @@ export async function parseYouTube(url: string, rawUrl: URL): Promise<ResolveRes
   return {
     success: true,
     platform: isMusic ? 'youtube-music' : 'youtube',
-    type: 'video',
+    type: isPlaylist ? 'playlist' : 'video',
     id: videoId,
     title,
     artist,

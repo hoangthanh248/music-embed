@@ -5,6 +5,14 @@ import LanguageSwitcher from '@/components/language-switcher';
 export const metadata: Metadata = {
   title: 'Thazh Embed',
   description: 'A frictionless, edge-ready proxy to embed music and video without heavy third-party intermediate trackers.',
+  metadataBase: new URL('https://embed.thazh.qzz.io'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en': '/en',
+      'vi': '/',
+    },
+  },
   openGraph: {
     title: 'Thazh Embed - Edge App',
     description: 'A frictionless, edge-ready proxy to embed music and video without heavy third-party intermediate trackers.',
@@ -17,6 +25,12 @@ export const metadata: Metadata = {
     title: 'Thazh Embed API',
     description: 'Edge-ready proxy to embed music without heavy third-party intermediate trackers.',
   },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {

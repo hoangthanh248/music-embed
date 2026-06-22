@@ -31,6 +31,10 @@ Base URL: \`https://embed.thazh.qzz.io\`
 \`GET /api/stream?url={encodeURIComponent(url)}\`
 - **Response:** Raw HTML structure (a full webpage) rendering an active player taking 100% of the viewport width/height. Can be used directly as \\\`iframe src\\\`.
 
+### 7. Social Share Preview Page
+\`GET /api/share?url={encodeURIComponent(url)}&title=...&description=...&image=...\`
+- **Response:** HTML page containing specialized Open Graph tags and Twitter Cards for social sharing, alongside a visual fallback UI that redirects to the embed URL.
+
 ### Platforms Supported
 Spotify, Apple Music, SoundCloud, Deezer, YouTube, Amazon Music, TikTok, YouTube Music
 `;
@@ -88,6 +92,11 @@ export default function DocsPage() {
            <div className="space-y-3 pt-4 border-t border-white/5">
              <h3 className="text-lg font-medium text-emerald-400 font-mono">GET /api/stream?url=...</h3>
              <p className="text-sm text-white/60">Returns an active HTML card layout containing the media embed securely without middle-man referers. This URL can directly be used inside an iframe&apos;s <code className="text-pink-400">src</code> field.</p>
+           </div>
+           
+           <div className="space-y-3 pt-4 border-t border-white/5">
+             <h3 className="text-lg font-medium text-emerald-400 font-mono">GET /api/share?url=...</h3>
+             <p className="text-sm text-white/60">Returns an HTML page optimized for social sharing with Open Graph and Twitter Card tags. You can pass query parameters <code className="text-pink-400">title</code>, <code className="text-pink-400">description</code>, and <code className="text-pink-400">image</code> to customize the preview explicitly.</p>
            </div>
         </div>
       </div>
