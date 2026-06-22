@@ -68,7 +68,7 @@ export default function Home() {
             <div className="p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md">
               <h3 className="text-lg font-bold text-white mb-2">What is Thazh Embed?</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                It's an edge-computed proxy service that helps embed media (music, videos) onto your website or application quickly and without heavy third-party intermediate trackers.
+                It&apos;s an edge-computed proxy service that helps embed media (music, videos) onto your website or application quickly and without heavy third-party intermediate trackers.
               </p>
             </div>
             <div className="p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md">

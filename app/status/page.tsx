@@ -47,6 +47,7 @@ export default function StatusPage() {
   };
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     checkStatus();
   }, []);
 
