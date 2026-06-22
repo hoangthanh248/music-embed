@@ -3,6 +3,8 @@ import { resolveUrl } from "@/lib/parsers";
 
 export const runtime = 'edge';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(req: NextRequest) {
   const url = req.nextUrl.searchParams.get("url");
   const customTitle = req.nextUrl.searchParams.get("title");
@@ -126,7 +128,7 @@ export async function GET(req: NextRequest) {
   }
 }
 
-export async function OPTIONS() {
+export async function OPTIONS(req: NextRequest) {
   const headers = new Headers();
   headers.set("Access-Control-Allow-Origin", "*");
   headers.set("Access-Control-Allow-Methods", "GET, OPTIONS");

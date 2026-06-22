@@ -28,7 +28,11 @@ export default function StatusPage() {
 
     await Promise.all(PLATFORMS.map(async (platform) => {
       try {
-        const res = await fetch(`/api/embed/resolve?url=${encodeURIComponent(platform.testUrl)}`);
+        const res = await fetch(`/api/embed/resolve`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ url: platform.testUrl })
+        });
         const data = await res.json();
         setStatuses(prev => ({
           ...prev,

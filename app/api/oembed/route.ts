@@ -6,6 +6,8 @@ import { OEmbedResponse } from "@/types";
 
 
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(req: NextRequest) {
   const ip = req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip") || "anonymous";
   
@@ -79,7 +81,7 @@ export async function GET(req: NextRequest) {
   }
 }
 
-export async function OPTIONS() {
+export async function OPTIONS(req: NextRequest) {
   const headers = new Headers();
   headers.set("Access-Control-Allow-Origin", "*");
   headers.set("Access-Control-Allow-Methods", "GET, OPTIONS");
