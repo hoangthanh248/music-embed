@@ -16,7 +16,7 @@ export default function CustomStudioPage() {
   const [theme, setTheme] = useState<'default' | '0' | '1'>('default'); // 0 = light, 1 = dark for some platforms
   const [borderRadius, setBorderRadius] = useState('12px');
   
-  const [activeTab, setActiveTab] = useState<'preview' | 'html' | 'react'>('preview');
+  const [activeTab, setActiveTab] = useState<'preview' | 'html' | 'react' | 'api'>('preview');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -195,6 +195,7 @@ export default function CustomStudioPage() {
                   <button onClick={() => setActiveTab('preview')} className={`text-xs px-4 py-2 rounded-full font-bold transition-all whitespace-nowrap ${activeTab === 'preview' ? 'bg-white text-black' : 'text-white/50 hover:text-white bg-white/5 hover:bg-white/10'}`}>Preview</button>
                   <button onClick={() => setActiveTab('html')} className={`text-xs px-4 py-2 rounded-full font-bold transition-all whitespace-nowrap ${activeTab === 'html' ? 'bg-white text-black' : 'text-white/50 hover:text-white bg-white/5 hover:bg-white/10'}`}>HTML</button>
                   <button onClick={() => setActiveTab('react')} className={`text-xs px-4 py-2 rounded-full font-bold transition-all whitespace-nowrap ${activeTab === 'react' ? 'bg-white text-black' : 'text-white/50 hover:text-white bg-white/5 hover:bg-white/10'}`}>React</button>
+                  <button onClick={() => setActiveTab('api')} className={`text-xs px-4 py-2 rounded-full font-bold transition-all whitespace-nowrap ${activeTab === 'api' ? 'bg-white text-black' : 'text-white/50 hover:text-white bg-white/5 hover:bg-white/10'}`}>API</button>
                 </div>
 
                 <div className="p-4 flex-1 flex flex-col">
@@ -229,6 +230,27 @@ export default function CustomStudioPage() {
                     <div className="bg-black/50 p-6 rounded-[1.5rem] border border-white/10 flex-1 overflow-x-auto text-xs text-white/80 font-mono shadow-inner relative group">
                       <button onClick={() => navigator.clipboard.writeText(reactCode)} className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 p-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">Copy</button>
                       <pre className="whitespace-pre-wrap">{reactCode}</pre>
+                    </div>
+                  )}
+
+                  {activeTab === 'api' && (
+                    <div className="bg-black/50 p-6 rounded-[1.5rem] border border-white/10 flex-1 overflow-x-auto text-xs text-white/80 font-mono shadow-inner relative group flex flex-col justify-center">
+                      <p className="text-white/60 mb-2 font-sans">Fetch this customized embed via our API:</p>
+                      <div className="bg-black/80 p-4 rounded-xl border border-white/5 relative mt-2">
+                        <button 
+                          onClick={() => {
+                            const origin = typeof window !== 'undefined' ? window.location.origin : '';
+                            const apiPath = `/api/custom?url=${encodeURIComponent(url)}&size=${encodeURIComponent(width)}${height ? `&height=${encodeURIComponent(height)}` : ''}&style=${encodeURIComponent(borderRadius)}${theme !== 'default' ? `&theme=${theme}` : ''}`;
+                            navigator.clipboard.writeText(origin + apiPath);
+                          }} 
+                          className="absolute top-3 right-3 bg-white/10 hover:bg-white/20 p-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                        >
+                          Copy
+                        </button>
+                        <code className="text-green-400 break-all">
+                          {typeof window !== 'undefined' ? window.location.origin : ''}/api/custom?url={encodeURIComponent(url)}&size={encodeURIComponent(width)}{height ? `&height=${encodeURIComponent(height)}` : ''}&style={encodeURIComponent(borderRadius)}{theme !== 'default' ? `&theme=${theme}` : ''}
+                        </code>
+                      </div>
                     </div>
                   )}
                 </div>

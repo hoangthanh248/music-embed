@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import './globals.css'; // Global styles
 import LanguageSwitcher from '@/components/language-switcher';
+import Sidebar from '@/components/sidebar';
 
 export const metadata: Metadata = {
   title: 'Thazh Embed',
@@ -36,7 +37,7 @@ export const viewport = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
-      <body className="bg-black text-white antialiased min-h-screen relative overflow-hidden" suppressHydrationWarning>
+      <body className="bg-black text-white antialiased min-h-screen relative overflow-hidden flex" suppressHydrationWarning>
         {/* Liquid Glass Dynamic Background */}
         <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-black">
           <div className="absolute top-[-20%] left-[-10%] w-[70vw] h-[70vw] bg-purple-600/30 blur-[140px] rounded-full mix-blend-screen animate-blob"></div>
@@ -49,8 +50,10 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
 
         <LanguageSwitcher />
         
+        <Sidebar />
+
         {/* Scrollable Container with Glass Effect */}
-        <div className="h-screen overflow-auto">
+        <div className="flex-1 h-screen overflow-auto">
           {children}
         </div>
       </body>
